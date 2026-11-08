@@ -1,0 +1,19 @@
+{
+  "model": "DiT-S/2",
+  "max_steps": 1000,
+  "batch_size": 8,
+  "training_frames": "all",
+  "lr": 0.0001,
+  "condition_dropout": 0.1,
+  "pair_weight": 0.05,
+  "shared_weight": 0.01,
+  "private_weight": 0.01,
+  "prototype_weight": 0,
+  "ema_decay": 0.99,
+  "save_every": 1000,
+  "eval_every": 250,
+  "eval_batches": 8,
+  "log_every": 100,
+  "seed": 42,
+  "device": "cuda:0"
+}

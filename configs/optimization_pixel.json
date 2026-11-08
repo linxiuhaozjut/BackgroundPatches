@@ -1,0 +1,26 @@
+{
+  "yaml": "deep_rgbt",
+  "iterations": 12,
+  "sequences_per_step": 10,
+  "directions": 4,
+  "sigma": 0.06,
+  "learning_rate": 0.02,
+  "iou_weight": 0.6,
+  "guide_weight": 0.3,
+  "tv_weight": 0,
+  "seed": 42,
+  "fps": 10,
+  "device": 0,
+  "workers": 8,
+  "devices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "visualize_every": 0
+}

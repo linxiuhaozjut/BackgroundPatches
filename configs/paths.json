@@ -1,0 +1,16 @@
+{
+  "generator_dataset": "datasets/generator_train/dataset_400_2",
+  "generator_cache": "datasets/generator_train/prepared",
+  "carla_dataset": "datasets/carla/dataset_400_2",
+  "vae": "weights/vae",
+  "dit_backbone": "weights/generator/dit_backbone.pt",
+  "base_checkpoint": "outputs/generator/base/best.pt",
+  "generator_checkpoint": "outputs/generator/prototype/last.pt",
+  "tracker_checkpoint": "weights/tracker/vipt.pth.tar",
+  "segmentation_weights": "weights/segmentation/yolov8n-seg.pt",
+  "initial_patch": "outputs/patches/initial",
+  "optimization_output": "outputs/optimization",
+  "train_split": "datasets/splits/train.json",
+  "development_split": "datasets/splits/development.json",
+  "test_split": "datasets/splits/test.json"
+}

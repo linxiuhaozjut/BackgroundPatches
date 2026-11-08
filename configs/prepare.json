@@ -1,0 +1,12 @@
+{
+  "image_size": 256,
+  "feature_grid": 8,
+  "mse_scale": "unit",
+  "mse_threshold": 0.5,
+  "keyframe_reset": "target",
+  "resize_mode": "stretch",
+  "val_fraction": 0.1,
+  "batch_size": 16,
+  "seed": 42,
+  "device": "cuda:0"
+}

@@ -1,0 +1,9 @@
+# Install a compatible PyTorch/torchvision build for the target accelerator.
+# Additional dependencies may be required by optional tracker utilities.
+-r generator/requirements_paired.txt
+torch>=2.0
+torchvision>=0.15
+PyYAML>=6
+easydict>=1.9
+einops>=0.6
+ultralytics>=8

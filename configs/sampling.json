@@ -1,0 +1,8 @@
+{
+  "sampling_steps": 100,
+  "cfg_scale": 3.0,
+  "seed": 42,
+  "device": "cuda:0",
+  "sampler": "ddim",
+  "num_pairs": 1
+}

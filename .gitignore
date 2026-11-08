@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv*/
+datasets/**
+!datasets/**/
+!datasets/**/.gitkeep
+!datasets/**/README.md
+weights/**
+!weights/**/
+!weights/**/.gitkeep
+!weights/README.md
+outputs/**
+!outputs/**/
+!outputs/**/.gitkeep
+!outputs/README.md

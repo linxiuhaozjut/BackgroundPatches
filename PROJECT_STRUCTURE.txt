@@ -1,0 +1,246 @@
+.
+├── configs/
+│   ├── .gitkeep
+│   ├── generator_base.json
+│   ├── generator_prototype.json
+│   ├── optimization_coherent.json
+│   ├── optimization_pixel.json
+│   ├── paths.json
+│   ├── prepare.json
+│   ├── README.md
+│   └── sampling.json
+├── datasets/
+│   ├── carla/
+│   │   └── dataset_400_2/
+│   │       ├── ir_camera_view_30/
+│   │       │   └── distance_09m/
+│   │       │       └── 10_pedestrian_0002/
+│   │       │           └── .gitkeep
+│   │       ├── label/
+│   │       │   └── .gitkeep
+│   │       ├── mask/
+│   │       │   └── .gitkeep
+│   │       ├── metadata/
+│   │       │   └── .gitkeep
+│   │       └── vi_camera_view_30/
+│   │           └── distance_09m/
+│   │               └── 10_pedestrian_0002/
+│   │                   └── .gitkeep
+│   ├── generator_train/
+│   │   ├── dataset_400_2/
+│   │   │   ├── ir_camera_view_30/
+│   │   │   │   └── distance_09m/
+│   │   │   │       └── 10_pedestrian_0002/
+│   │   │   │           └── .gitkeep
+│   │   │   ├── label/
+│   │   │   │   └── .gitkeep
+│   │   │   ├── mask/
+│   │   │   │   └── .gitkeep
+│   │   │   ├── metadata/
+│   │   │   │   └── .gitkeep
+│   │   │   └── vi_camera_view_30/
+│   │   │       └── distance_09m/
+│   │   │           └── 10_pedestrian_0002/
+│   │   │               └── .gitkeep
+│   │   └── prepared/
+│   │       └── .gitkeep
+│   ├── splits/
+│   │   └── .gitkeep
+│   └── README.md
+├── docs/
+│   ├── configuration.md
+│   ├── data.md
+│   ├── generator.md
+│   └── optimization.md
+├── generator/
+│   ├── diffusion/
+│   │   ├── __init__.py
+│   │   ├── diffusion_utils.py
+│   │   ├── gaussian_diffusion.py
+│   │   ├── respace.py
+│   │   └── timestep_sampler.py
+│   ├── evaluate_prototype_samples.py
+│   ├── LICENSE.txt
+│   ├── models.py
+│   ├── paired_dit_data.py
+│   ├── paired_dit_model.py
+│   ├── paired_prototype_loss.py
+│   ├── README.md
+│   ├── requirements_paired.txt
+│   ├── sample_paired_dit.py
+│   └── train_paired_dit.py
+├── optimization/
+│   ├── export_blackbox_preview.py
+│   ├── optimize_dataset4002_blackbox.py
+│   ├── optimize_dataset4002_coherent.py
+│   ├── README.md
+│   ├── summarize_simple_attack.py
+│   ├── train_dataset4002_full.py
+│   ├── verify_blackbox_patch.py
+│   └── verify_coherent_patch.py
+├── outputs/
+│   ├── generator/
+│   │   ├── base/
+│   │   │   └── .gitkeep
+│   │   └── prototype/
+│   │       └── .gitkeep
+│   ├── optimization/
+│   │   └── .gitkeep
+│   ├── patches/
+│   │   └── initial/
+│   │       └── .gitkeep
+│   ├── tracker/
+│   │   └── .gitkeep
+│   └── README.md
+├── preprocessing/
+│   ├── apply_paired_patches.py
+│   ├── build_fixed_camera_annotations.py
+│   └── README.md
+├── scripts/
+│   ├── .gitkeep
+│   └── pipeline.py
+├── tracker/
+│   ├── experiments/
+│   │   └── vipt/
+│   │       └── deep_rgbt.yaml
+│   ├── lib/
+│   │   ├── config/
+│   │   │   └── vipt/
+│   │   │       └── config.py
+│   │   ├── models/
+│   │   │   ├── layers/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── attn.py
+│   │   │   │   ├── attn_blocks.py
+│   │   │   │   ├── frozen_bn.py
+│   │   │   │   ├── head.py
+│   │   │   │   ├── patch_embed.py
+│   │   │   │   └── rpe.py
+│   │   │   ├── vipt/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── base_backbone.py
+│   │   │   │   ├── ostrack.py
+│   │   │   │   ├── ostrack_prompt.py
+│   │   │   │   ├── utils.py
+│   │   │   │   ├── vit.py
+│   │   │   │   ├── vit_ce.py
+│   │   │   │   ├── vit_ce_prompt.py
+│   │   │   │   └── vit_prompt.py
+│   │   │   └── __init__.py
+│   │   ├── test/
+│   │   │   ├── evaluation/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── data.py
+│   │   │   │   ├── datasets.py
+│   │   │   │   ├── environment.py
+│   │   │   │   ├── local.py
+│   │   │   │   ├── running.py
+│   │   │   │   ├── tracker.py
+│   │   │   │   ├── votdataset.py
+│   │   │   │   └── vtuavdataset.py
+│   │   │   ├── parameter/
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── vipt.py
+│   │   │   ├── tracker/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── basetracker.py
+│   │   │   │   ├── data_utils.py
+│   │   │   │   ├── ostrack.py
+│   │   │   │   ├── vipt.py
+│   │   │   │   └── vis_utils.py
+│   │   │   ├── utils/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── _init_paths.py
+│   │   │   │   ├── hann.py
+│   │   │   │   ├── load_text.py
+│   │   │   │   └── params.py
+│   │   │   └── vot/
+│   │   │       ├── vipt_baseline.py
+│   │   │       ├── vipt_class.py
+│   │   │       ├── vot.py
+│   │   │       └── vot22_utils.py
+│   │   ├── train/
+│   │   │   ├── actors/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── base_actor.py
+│   │   │   │   └── vipt.py
+│   │   │   ├── admin/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── environment.py
+│   │   │   │   ├── local.py
+│   │   │   │   ├── multigpu.py
+│   │   │   │   ├── settings.py
+│   │   │   │   ├── stats.py
+│   │   │   │   └── tensorboard.py
+│   │   │   ├── data/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── bounding_box_utils.py
+│   │   │   │   ├── image_loader.py
+│   │   │   │   ├── loader.py
+│   │   │   │   ├── processing.py
+│   │   │   │   ├── processing_utils.py
+│   │   │   │   ├── sampler.py
+│   │   │   │   └── transforms.py
+│   │   │   ├── dataset/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── base_image_dataset.py
+│   │   │   │   ├── base_video_dataset.py
+│   │   │   │   ├── coco.py
+│   │   │   │   ├── coco_seq.py
+│   │   │   │   ├── coco_seq_lmdb.py
+│   │   │   │   ├── COCO_tool.py
+│   │   │   │   ├── depth_utils.py
+│   │   │   │   ├── depthtrack.py
+│   │   │   │   ├── got10k.py
+│   │   │   │   ├── got10k_lmdb.py
+│   │   │   │   ├── imagenetvid.py
+│   │   │   │   ├── imagenetvid_lmdb.py
+│   │   │   │   ├── lasher.py
+│   │   │   │   ├── lasot.py
+│   │   │   │   ├── lasot_lmdb.py
+│   │   │   │   ├── tracking_net.py
+│   │   │   │   ├── tracking_net_lmdb.py
+│   │   │   │   └── visevent.py
+│   │   │   ├── trainers/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── base_trainer.py
+│   │   │   │   └── ltr_trainer.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _init_paths.py
+│   │   │   ├── base_functions.py
+│   │   │   ├── run_training.py
+│   │   │   └── train_script.py
+│   │   ├── utils/
+│   │   │   ├── __init__.py
+│   │   │   ├── box_ops.py
+│   │   │   ├── ce_utils.py
+│   │   │   ├── focal_loss.py
+│   │   │   ├── heapmap_utils.py
+│   │   │   ├── lmdb_utils.py
+│   │   │   ├── merge.py
+│   │   │   ├── misc.py
+│   │   │   └── tensor.py
+│   │   ├── vis/
+│   │   │   ├── __init__.py
+│   │   │   ├── plotting.py
+│   │   │   ├── utils.py
+│   │   │   └── visdom_cus.py
+│   │   └── __init__.py
+│   ├── LICENSE
+│   └── README.md
+├── weights/
+│   ├── generator/
+│   │   └── .gitkeep
+│   ├── segmentation/
+│   │   └── .gitkeep
+│   ├── tracker/
+│   │   └── .gitkeep
+│   ├── vae/
+│   │   └── .gitkeep
+│   └── README.md
+├── .gitattributes
+├── .gitignore
+├── PROJECT_STRUCTURE.txt
+├── README.md
+├── requirements.txt
+└── THIRD_PARTY_NOTICES.md
