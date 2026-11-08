@@ -1,3 +1,5 @@
+![Dual-modal patch attack demonstration](AttackVedioFile.gif)
+
 # Dual-Modal Camouflage Generation and Optimization
 
 A research codebase for generating paired visible and infrared background patches and optimizing them against a visual tracker through bounding-box queries.
@@ -99,7 +101,3 @@ The implementation requires a compatible PyTorch/torchvision installation, the d
 - [Third-party components](THIRD_PARTY_NOTICES.md)
 
 Generator outputs are conditioned image samples. Attack effectiveness is measured in the subsequent tracker evaluation and is not implied by the generator objective alone. This repository provides the source implementation and configuration templates; complete training and evaluation require the external data and model artifacts described above.
-
-## Demonstration
-
-![Dual-modal patch attack demonstration](AttackVedioFile.gif)
